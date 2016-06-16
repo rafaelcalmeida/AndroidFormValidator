@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/activity_vertical_margin"
+    tools:context="com.rca.sample.MainActivity">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/il_content_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nome"
+            android:imeOptions="actionNext"
+            android:inputType="textCapWords|textPersonName"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <com.rca.formvalidator.FormView
+        android:id="@+id/fv_content_surname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/il_content_name"
+        android:layout_marginTop="16dp">
+
+        <EditText
+            android:id="@+id/et_surname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Sobrenome"
+            android:imeOptions="actionNext"
+            android:inputType="textCapWords|textPersonName"/>
+
+    </com.rca.formvalidator.FormView>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/il_content_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fv_content_surname"
+        android:layout_marginTop="16dp">
+
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:imeOptions="actionNext"
+            android:inputType="textCapWords|textPersonName"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <com.rca.formvalidator.FormView
+        android:id="@+id/fv_content_example"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/il_content_email"
+        app:error_marginLeft="8dp"
+        android:layout_marginTop="16dp">
+
+        <CheckBox
+            android:id="@+id/cb_example"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Examplo de checkbox"/>
+
+    </com.rca.formvalidator.FormView>
+
+    <Button
+        android:id="@+id/bt_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Validar"/>
+
+    <Button
+        android:id="@+id/bt_clear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bt_start"
+        android:text="Limpar"/>
+
+</RelativeLayout>

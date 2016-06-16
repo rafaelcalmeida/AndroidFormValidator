@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+    ================================================================================================
+    Declarar os Attrs
+    ================================================================================================
+    -->
+
+    <attr name="error_marginTop" format="dimension"/>
+    <attr name="error_marginRight" format="dimension"/>
+    <attr name="error_marginBottom" format="dimension"/>
+    <attr name="error_marginLeft" format="dimension"/>
+
+    <!--
+    ================================================================================================
+    Declarar os Styleable
+    ================================================================================================
+    -->
+
+    <declare-styleable name="FormView">
+        <attr name="error_marginTop"/>
+        <attr name="error_marginRight"/>
+        <attr name="error_marginBottom"/>
+        <attr name="error_marginLeft"/>
+    </declare-styleable>
+
+</resources>

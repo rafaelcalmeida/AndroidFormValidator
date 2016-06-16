@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+   <!--
+   ================================================================================================
+   TextView
+   ================================================================================================
+   -->
+
+    <style name="ClassTheme.Error" parent="@android:style/Widget.TextView">
+
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/label_size</item>
+        <item name="android:textColor">@color/label_text_bg</item>
+        <item name="android:background">@android:color/transparent</item>
+
+    </style>
+
+</resources>

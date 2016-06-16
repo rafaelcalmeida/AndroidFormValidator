@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">FormValidator</string>
+    <string name="default_message_error">Campo obrigatório</string>
+</resources>
