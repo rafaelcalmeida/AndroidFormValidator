@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- Base Grey -->
-    <color name="base_color_grey_100">#9ca096</color>
-    <color name="base_color_grey_200">#888c83</color>
-    <color name="base_color_grey_300">#757870</color>
-    <color name="base_color_grey_400">#61645e</color>
-    <color name="base_color_grey_500">#4e504b</color>
-
     <!-- Base Red -->
     <color name="base_color_red_100">#ef958b</color>
     <color name="base_color_red_200">#e96c5e</color>
@@ -16,14 +9,5 @@
     <color name="base_color_red_500">#c62c1b</color>
     <color name="base_color_red_600">#dd4b39</color>
     <color name="base_color_red_700">#c64333</color>
-
-    <!--
-    ================================================================================================
-    TextView
-    ================================================================================================
-    -->
-
-    <!-- Label -->
-    <color name="label_text_bg">@color/base_color_red_500</color>
 
 </resources>
