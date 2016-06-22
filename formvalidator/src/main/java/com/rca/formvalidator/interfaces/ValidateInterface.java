@@ -8,4 +8,6 @@ public interface ValidateInterface {
     boolean isValid();
 
     void closeError();
+
+    void clearValidators();
 }
