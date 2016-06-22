@@ -1,9 +1,8 @@
 package com.rca.sample;
 
-import android.support.design.widget.TextInputLayout;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.design.widget.TextInputLayout;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -107,13 +106,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // Validates
         Validate nameValidate = new Validate(etName, ilContentName);
         nameValidate.addValidator(new NotEmptyValidator(this, R.string.err_empty));
+        etName.setOnFocusChangeListener(new OnFocusValidationListener(nameValidate));
 
         Validate surNameValidate = new Validate(etSurname, fvContetSurname);
         surNameValidate.addValidator(new NotEmptyValidator(this, R.string.err_empty));
+        etSurname.setOnFocusChangeListener(new OnFocusValidationListener(surNameValidate));
 
         Validate emailValidate = new Validate(etEmail, ilContentEmail);
         emailValidate.addValidator(new NotEmptyValidator(this, R.string.err_empty));
         emailValidate.addValidator(new EmailValidator(this, R.string.err_email_invalid_format));
+        etEmail.setOnFocusChangeListener(new OnFocusValidationListener(emailValidate));
 
         Validate checkBoxValidate = new Validate(cbExample, fvContentExample);
         checkBoxValidate.addValidator(new CheckBoxValidator(this, R.string.required_field));

@@ -75,11 +75,20 @@ public final class Validate implements ValidateInterface {
     @Override
     public void closeError() {
 
+        closeError(textInputLayout);
+        closeError(formViewInterface);
+    }
+
+    public static void closeError(TextInputLayout textInputLayout) {
+
         if (textInputLayout != null) {
 
             textInputLayout.setErrorEnabled(false);
             textInputLayout.setError(null);
         }
+    }
+
+    public static void closeError(FormViewInterface formViewInterface) {
 
         if (formViewInterface != null) {
 

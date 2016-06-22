@@ -2,6 +2,8 @@ package com.rca.formvalidator;
 
 import android.support.design.widget.TextInputLayout;
 
+import com.rca.formvalidator.interfaces.FormViewInterface;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -47,13 +49,22 @@ public class Form {
         return isValid;
     }
 
+    public void closeError(Validate validate) {
+
+        if (validate != null) {
+
+            validate.closeError();
+        }
+    }
+
     public void closeError(TextInputLayout textInputLayout) {
 
-        if (textInputLayout != null) {
+        Validate.closeError(textInputLayout);
+    }
 
-            textInputLayout.setErrorEnabled(false);
-            textInputLayout.setError(null);
-        }
+    public void closeError(FormViewInterface formViewInterface) {
+
+        Validate.closeError(formViewInterface);
     }
 
     public void closeAllErrors() {
