@@ -216,33 +216,7 @@ public class FormView extends LinearLayout implements FormViewInterface {
         }
 
         drawable.clearColorFilter();
-
-        if (Build.VERSION.SDK_INT == 21 || Build.VERSION.SDK_INT == 22) {
-
-            return;
-        }
-
-        if (drawable instanceof InsetDrawable) {
-
-            clearColorFilter(((InsetDrawable) drawable).getDrawable());
-
-        } else if (drawable instanceof DrawableWrapper) {
-
-            clearColorFilter(((DrawableWrapper) drawable).getWrappedDrawable());
-
-        } else if (drawable instanceof DrawableContainer) {
-
-            final DrawableContainer container = (DrawableContainer) drawable;
-            final DrawableContainer.DrawableContainerState state = (DrawableContainer.DrawableContainerState) container.getConstantState();
-
-            if (state != null) {
-
-                for (int i = 0, count = state.getChildCount(); i < count; i++) {
-
-                    clearColorFilter(state.getChild(i));
-                }
-            }
-        }
+        drawable.invalidateSelf();
     }
 
     private Drawable getBackgroundDrawable() {
